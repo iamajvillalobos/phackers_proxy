@@ -3,7 +3,7 @@ Because we need a secure way to talk with Slack API. I created an API Proxy wher
 
 ## Thanks
 
-**phackers.io** © 2015+, Arman Jon Villalobos. Released under the [MIT] License.<br>
+**phackers_proxy** © 2015+, Arman Jon Villalobos. Released under the [MIT] License.<br>
 Authored and maintained by Arman Jon Villalobos with help from contributors ([list][contributors]).
 
 > [armanjon.com](http://armanjon.com) &nbsp;&middot;&nbsp;
