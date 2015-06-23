@@ -12,7 +12,7 @@ app.get('/api/v1/users/', function (req, res) {
   var url = "https://teamastig.slack.com/api/users.list?token=" + TOKEN;
   var users = request.get(url, function (error, response, body) {
     var users_collection = JSON.parse(body);
-      res.json(users_collection);
+      res.json(users_collection.members.length);
   });
 });
 
