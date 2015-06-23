@@ -1,6 +1,8 @@
 # phackers proxy
 Because we need a secure way to talk with Slack API. I created an API Proxy where the client and slack can talk.
 
+## Thanks
+
 **phackers.io** © 2015+, Arman Jon Villalobos. Released under the [MIT] License.<br>
 Authored and maintained by Arman Jon Villalobos with help from contributors ([list][contributors]).
 
