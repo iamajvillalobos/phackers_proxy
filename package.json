@@ -1,0 +1,18 @@
+{
+  "name": "phackers_proxy",
+  "version": "1.0.0",
+  "description": "api proxy for phackers.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arman Jon Villalobos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.0",
+    "request": "^2.58.0"
+  },
+  "engines": {
+    "node": "0.12.4"
+  }
+}
