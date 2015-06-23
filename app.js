@@ -1,9 +1,11 @@
 // Require packages
 var express = require('express');
 var request = require('request');
+var cors = require('cors');
 
 // Declare server object
 var app = express();
+app.use(cors());
 
 var TOKEN = process.env.TOKEN;
 var DOMAIN = process.env.DOMAIN;

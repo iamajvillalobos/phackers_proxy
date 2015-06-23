@@ -9,6 +9,7 @@
   "author": "Arman Jon Villalobos",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.0",
     "request": "^2.58.0"
   },
