@@ -25,19 +25,6 @@ apiRouter.route('/api/v1/')
       });
     });
 
-    //.post('/invite', function (req, res) {
-    //  if (!req.body.hasOwnProperty('email') || (!req.body.hasOwnProperty('time'))) {
-    //    res.statusCode = 400;
-    //    return res.send('Error 400: Parameters incorrect!');
-    //  }
-    //
-    //  var url = "https://" + process.env.DOMAIN + ".slack.com/api/users.admin.invite?t=" + req.body.time + "&email=" +
-    //          req.body.email + "&token" + process.env.TOKEN + "&set_active=true";
-    //  var result = request.post(url, function (error, response, body) {
-    //    res.json(JSON.parse(body));
-    //  });
-    //});
-
 //app.get('/api/v1/users/', function (req, res) {
 //  var url = "https://"+ DOMAIN +".slack.com/api/users.list?token=" + TOKEN;
 //  var users = request.get(url, function (error, response, body) {
@@ -46,18 +33,18 @@ apiRouter.route('/api/v1/')
 //  });
 //});
 
-//app.post('/api/v1/invite/', function (req, res) {
-//  if (!req.body.hasOwnProperty('email') || (!req.body.hasOwnProperty('time'))) {
-//    res.statusCode = 400;
-//    return res.send('Error 400: Parameters incorrect!');
-//  }
-//
-//  var url = "https://" + process.env.DOMAIN + ".slack.com/api/users.admin.invite?t=" + req.body.time + "&email=" + req.body.email + "&token=" + process.env.TOKEN + "&set_active=true";
-//
-//  var result = request.post(url, function (error, response, body) {
-//    res.json(JSON.parse(body));
-//  });
-//});
+app.post('/api/v1/invite/', function (req, res) {
+  if (!req.body.hasOwnProperty('email') || (!req.body.hasOwnProperty('time'))) {
+    res.statusCode = 400;
+    return res.send('Error 400: Parameters incorrect!');
+  }
+
+  var url = "https://" + process.env.DOMAIN + ".slack.com/api/users.admin.invite?t=" + req.body.time + "&email=" + req.body.email + "&token=" + process.env.TOKEN + "&set_active=true";
+
+  var result = request.post(url, function (error, response, body) {
+    res.json(JSON.parse(body));
+  });
+});
 
 // Spawn server instance
 app.listen(process.env.PORT || 8888);
