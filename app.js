@@ -39,6 +39,7 @@ app.post('/api/v1/invite/', function (req, res, next) {
   };
 
   var result = request.post({ url: url, form: options }, function (error, response, body) {
+    if (err) return next(err);
     res.json(JSON.parse(body));
   });
 });
