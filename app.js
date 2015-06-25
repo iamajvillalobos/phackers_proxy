@@ -30,10 +30,15 @@ app.post('/api/v1/invite/', function (req, res, next) {
     return res.send('Error 400: Parameters incorrect!');
   }
 
-  var url = "https://" + process.env.DOMAIN + ".slack.com/api/users.admin.invite?t=" + req.body.time + "&email=" + req.body.email + "&token=" + process.env.TOKEN + "&set_active=true";
+  var url = "https://" + process.env.DOMAIN + ".slack.com/api/users.admin.invite";
+  var options = {
+    t: req.body.time,
+    email: req.body.email,
+    token: process.env.TOKEN,
+    set_active: true
+  };
 
-  var result = request.post(url, function (err, response, body) {
-    if (err) return next(err);
+  var result = request.post({ url: url, form: options }, function (error, response, body) {
     res.json(JSON.parse(body));
   });
 });
