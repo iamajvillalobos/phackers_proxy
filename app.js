@@ -52,9 +52,3 @@ apiRouter.route('/invite')
 
 // Spawn server instance
 app.listen(process.env.PORT || 8888);
-
-// Ping app every 5 minutes
-var http = require("http");
-setInterval(function() {
-  http.get("http://phackers-proxy.herokuapp.com");
-}, 300000);
