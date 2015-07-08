@@ -11,8 +11,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // environment variables
-var TOKEN = process.env.TOKEN || "xoxp-3359469240-3368537646-3525848797-5d232a";
-var DOMAIN = process.env.DOMAIN || "phackers";
+var TOKEN = process.env.TOKEN;
+var DOMAIN = process.env.DOMAIN;
 
  //Declare routes
 var apiRouter = express.Router();
